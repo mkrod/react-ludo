@@ -1,0 +1,99 @@
+:root {
+    --dice-size: 40px;
+    --dice-background: #fff;
+    --dice-color: #000;
+    --dice-dot-size: calc(var(--dice-size) / 5);
+    --dots-gap: 5px;
+}
+
+.dice_container{
+    height: var(--dice-size);
+    width: var(--dice-size);
+    background-color: var(--dice-background);
+    border-radius: 5px;
+    box-shadow:  0 0 12px var(--dice-color);
+    border: 0.5px solid var(--dice-color);
+    cursor: pointer;
+}
+
+.dice_container:disabled{
+    cursor: not-allowed;
+}
+
+.dice_container.roll{
+    animation: spin linear infinite .4s;
+}
+
+@keyframes spin {
+    from{
+        transform: rotateX(0deg);
+        transform: rotateY(0deg);
+        scale: 0;
+    }
+    to{
+        transform: rotateX(360deg);
+        transform: rotateY(360deg);
+        scale: 1;
+    }
+}
+
+.dice_dot{
+    height: var(--dice-dot-size);
+    width: var(--dice-dot-size);
+    background-color: var(--dice-color);
+    border-radius: 50%;
+}
+
+.inner_dice_container{
+    height: 100%;
+    width: 100%;
+}
+
+.inner_dice_container.one{
+    display: grid;
+    place-items: center;
+}
+
+.inner_dice_container.two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--dots-gap);
+    rotate: 45deg;
+}
+
+.inner_dice_container.three{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--dots-gap);
+    rotate: 45deg;
+    gap: calc(var(--dots-gap) / 1.5);
+}
+
+.inner_dice_container.four{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: calc(var(--dots-gap) / 3);
+    padding: 5px;
+}
+
+.inner_dice_container.five{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: calc(var(--dots-gap) / 1);
+    position: relative;
+    padding: 5px;
+}
+.inner_dice_container.five .fifth_dot{
+    position: absolute;
+}
+
+.inner_dice_container.six{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    padding: 4px;
+}

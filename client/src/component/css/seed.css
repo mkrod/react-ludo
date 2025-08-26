@@ -1,0 +1,30 @@
+:root{
+    --seed-size: calc((var(--path-width) * 2) / 4.5);
+}
+
+.seed_container{
+    height: var(--seed-size);
+    width: var(--seed-size);
+    border-radius: 50%;
+    border: 0.5px solid var(--black);
+    box-shadow: 0 0 2px var(--black);
+    cursor: grab;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: var(--black);
+    font-weight: bolder;
+    transition: box-shadow ease-in-out .3s;
+}
+
+.seed_container:not(:disabled):hover{
+    box-shadow: 0 0 5px var(--white);
+    border-color: transparent;
+
+}
+
+.seed_container:disabled{
+    cursor: not-allowed;
+}

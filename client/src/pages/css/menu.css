@@ -1,0 +1,101 @@
+.menu_background{
+    background-image: url("/public/bgWallpaper.jpeg");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: repeat;
+    background-size: contain;
+    animation: blur linear infinite 10s;
+    position: relative;
+}
+
+@keyframes blur {
+    0%{
+        filter: blur(10px);
+    }
+    50%{
+        filter: blur(4px);
+    }
+    100%{
+        filter: blur(10px);
+    }
+}
+
+.menu_content_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_items_container{
+    height: fit-content;
+    max-height: 500px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    background-color: #02060f;
+    box-shadow:  0 0 200px #c74d4d63;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.menu_item{
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 15px #ff4b2b, 0 0 30px #ff416c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.menu_item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 10.01%);
+    background-size: 20% 20%;
+    animation: sparkle 2s linear infinite;
+    z-index: 0;
+  }
+  
+  .menu_item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff4b2b, 0 0 40px #ff416c;
+  }
+  
+  .menu_item:active {
+    transform: scale(0.97);
+    box-shadow: 0 0 10px #ff4b2b;
+  }
+  
+  @keyframes sparkle {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+.back.menu_item{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}

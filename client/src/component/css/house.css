@@ -1,0 +1,32 @@
+.house_container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.house_image{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.house_seeds_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 100px;
+}
+
+.house_seed{
+    height: var(--seed-size);
+    width: var(--seed-size);
+    border-radius: 50%;
+    border: 0.5px solid var(--black);
+    box-shadow: 0 0 2px var(--black);
+    cursor: grab;
+}

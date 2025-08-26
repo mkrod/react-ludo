@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  font-family: monospace, sans-serif;
+  transition: all ease-in-out .5s;
+}
+
+:root{
+  --black: #000;
+  --white: #fff;
+  --gray: #555555;
+  --gray2: #1f1f1f;
+  --green: #008000;
+  --yellow: #ff0;
+  --blue: #0000ff;
+  --red: #ff0000;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}

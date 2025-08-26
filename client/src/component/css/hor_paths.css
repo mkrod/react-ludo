@@ -1,0 +1,27 @@
+.hor_path_container{
+    background-color: var(--white);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    box-sizing: border-box;
+}
+
+.vert_path_container{
+    background-color: var(--white);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-sizing: border-box;
+}
+
+.path{
+    border: 1.5px groove var(--black);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+}

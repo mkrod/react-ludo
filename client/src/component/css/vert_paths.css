@@ -1,0 +1,16 @@
+.vert_path_container{
+    background-color: var(--white);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-sizing: border-box;
+}
+
+.path{
+    border: 1.5px groove var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
